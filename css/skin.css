@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+body {position: relative; width:100%;}
+.layout{position:relative; max-width:1200px; margin:0 auto; padding:0 15px; box-sizing:border-box;}
+h4{color:#4c4b4b; font-size:30px; text-align: center; padding-top:50px; font-weight:400;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+h5 {position: relative; margin-top:30px; margin-bottom:10px; font-size:23px; color:#4c4b4b; font-weight:400; padding-top:9px;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+h5:before{content:""; display:block; position: absolute; top:0; left:0; width:26px; height:3px; background:#f65f5f;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+.mt_0 {margin-top:0;}
+
+.header{position:fixed;z-index:2; width:600px; height:83px; top:0; right:10%; background:rgba(228, 197, 221, 0.7); transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+.header ul:after{content:""; display:block; clear:both;}
+.header ul li {float:left; width:25%;}
+.header ul li a{display:block; text-align: center;font-size:17px; height:83px; line-height:83px;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+
+.home{background:#fbeaea; height:540px; padding-top:190px; box-sizing:border-box;}
+.about{background:#fff; padding:40px 0; box-sizing: border-box;}
+.portfolio{background:#f1f1f1;}
+.contact{background:#fff; height:300px; box-sizing:border-box;}
+
+.home em{font-style:normal; font-size:17px; }
+.home p{font-size:91px; line-height:106px;transition: all 0.3s ease;-webkit-transition: all 0.3s ease; }
+.home p span{display:block; font-weight:700;}
+
+.about .layout{padding-left:20%;}
+.about .layout h4{position: absolute; left:15px; top:50%; margin-top:-94px;}
+.txt_wrap { overflow: hidden;}
+.txt_wrap h4{margin:30px 0 10px 0; text-align:left; padding-top:0;}
+.txt_wrap ul li{position: relative; padding-left:8px; }
+.txt_wrap ul li:before{content:""; display:block; position: absolute; left:0; top:10px; width:3px; height:3px; background:#cacad7;}
+
+.port_area{ padding:40px 0;}
+.port_area ul:after{content:""; display:block; clear:both;}
+.port_area ul li{float:left; margin-left:2%; width:32%; margin-top:2%;}
+.port_area ul li:nth-child(1),
+.port_area ul li:nth-child(2),
+.port_area ul li:nth-child(3){margin-top:0;}
+.port_area ul li:nth-child(3n+1){margin-left:0;}
+.port_area ul li .cont_box{position: relative; display:block; height:260px; background:#ded5db; padding:30px; box-sizing: border-box;transition: all 0.3s ease;-webkit-transition: all 0.3s ease;}
+.port_area ul li .cont_box strong{font-size:18px; display:block; margin-bottom:15px;}
+.port_area ul li .more{position: absolute; right:30px; bottom:30px; display:block; margin-top:20px; color:#fff; font-size:16px; }
+.port_area ul li .more:hover{text-decoration:underline;}
+.port_area ul li .cont_box .under_line{font-weight:700;}
+
+.contact .layout{text-align: center;}
+.contact ul{ display:inline-block; margin-top:63px;}
+.contact ul li{font-size:23px; line-height:37px;}
+
+.footer{height:60px; background:#fbeaea; padding:20px 0; box-sizing:border-box;}
+.footer p { text-align: center; }
+
+.mobile_btn{display:none;}
+
+@media screen and (max-width:1200px){
+    h4{padding-top:40px;}
+    .header {right:5%;}
+    .about{padding:30px 0;}
+    .about .layout{padding-left:15px;}
+    .about .layout h4{position: relative; left:auto; top:auto; margin-top:0; padding-top:10px; text-align:center;}
+    .txt_wrap .mt_0{margin-top:30px;}
+
+    .port_area { padding: 30px 0; }
+}
+
+@media screen and (max-width:1024px){
+    .header{ right:15px; top:15px; width:auto; height:auto;}
+    .header ul{display:none;}
+    .header.on ul{display:block; margin-top:47px; padding:0 15px 10px 15px;}
+    .header ul li{float:none; width:100%;margin-bottom:15px;}
+    .header ul li a{text-align: right; line-height:19px; height:auto;}
+    .mobile_btn { display:block; position: absolute; right:0px; top:0px; z-index:3;}
+    .mobile_btn a{position: relative; display:block; width:50px; height:50px;background:rgba(228, 197, 221, 0.7);}
+    .mobile_btn a:before{content:""; display:block; position: absolute; right:25%;top:16px; width:50%; height:2px; background:#444; transition: all 0.2s linear; -webkit-transition: all 0.2s linear;}
+    .mobile_btn a:after{content:""; display:block; position: absolute; right:25%; bottom:16px; width:50%; height:2px; background:#444;transition: all 0.2s linear; -webkit-transition: all 0.2s linear;}
+    .mobile_btn a span{position: absolute; top:50%; margin-top:-1px; right:25%; width:50%; height:2px; background:#444; display:block; font-size:0;transition: all 0.2s linear; -webkit-transition: all 0.2s linear;}
+    .mobile_btn a.on{background:transparent;}
+    .mobile_btn a.on span {opacity:0; -webkit-opacity:0;}
+    .mobile_btn a.on:before{transform: rotate(45deg); -webkit-transform: rotate(45deg); top: 50%; right: 25%; width: 50%; margin-top: -1px;}
+    .mobile_btn a.on:after {transform: rotate(-45deg); -webkit-transform: rotate(-45deg); bottom: 50%; right: 25%; width: 50%; margin-bottom: -1px;}
+
+    .port_area ul li:nth-child(3n+1) {margin-left:2%;}
+    .port_area ul li:nth-child(2n+1) {margin-left:0;}
+    .port_area ul li:nth-child(3){margin-top:2%;}
+    .port_area ul li{width:49%; }
+    .port_area ul li:last-child{width:100%;}
+    .port_area ul li .cont_box {height:230px;}
+
+}
+
+@media screen and (max-width:840px) {
+    h4{font-size:26px;}
+    h5{font-size:20px;padding-top:8px;}
+    .home{height:510px;}
+    .home em {font-size:16px;}
+    .home p { font-size: 80px; line-height: 90px; }
+    .port_area ul li .cont_box strong {font-size:16px; margin-bottom:10px;}
+    .contact{height:auto;}
+    .contact ul{margin:30px 0 40px 0;}
+    .contact ul li { font-size: 18px;line-height: 30px; }
+}
+
+@media screen and (max-width:640px) {
+    h4{font-size:22px; padding-top:30px;}
+    .txt_wrap .mt_0{margin-top:20px;}
+    h5{font-size:18px;padding-top:7px;margin-top:20px;}
+    h5:before {width:20px;}
+    .home {height: 428px; padding-top: 165px;}
+    .home p { font-size: 60px;line-height: 72px;}
+    .about .layout h4{padding-top:0;}
+    .port_area ul li:nth-child(2){margin-top:2%;}
+    .port_area ul li{width:100%; margin-left:0 !important;}
+    .port_area ul li .cont_box {height:auto;padding: 20px 20px 60px 20px;}
+    .port_area ul li .more {right:20px; bottom:20px;}
+    .contact ul li { font-size: 14px;line-height: 25px; }
+}
+
+@media screen and (max-width:480px) {
+    .home{height:355px; padding-top: 146px;}
+    .home p {font-size: 50px; line-height: 57px; }
+}
+
+@media screen and (max-width:320px) {
+    .home{height:340px;}
+    .home p { font-size: 45px; line-height: 53px;}
+}
