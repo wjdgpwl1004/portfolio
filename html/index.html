@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes, target-densitydpi=device-dpi">
+        <meta name="format-detection" content="telephone=no,email=no,address=no" />
+        <meta charset="utf-8" />
+        <title>portfolio</title>
+        <link rel="stylesheet" href="../font/NotoSans/fonts.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="../css/core.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="../css/skin.css" media="all" />
+        <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var param = $(".header ul");
+                var item = param.find("li");
+                var anchor = param.find("a");
+
+                anchor.on("click",function(event){
+                var href = $(this).attr("href"),
+                        href = $(href).offset().top;
+                        $("html,body").stop(true,false).animate({scrollTop:href},1000);
+                        event.preventDefault();
+                });
+
+                $('.allmenu').click(function(){
+                    $(this).toggleClass("on");
+                    if($(this).hasClass("on")){
+					$(this).html("<span>전체메뉴닫기</span>");
+                    $('.header').addClass('on');
+				} else {
+					$(this).html("<span>전체메뉴열기</span>");
+                    $('.header').removeClass('on');	
+				}
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="mobile_btn">
+                <a href="#menu" class="allmenu"><span>전체메뉴 열기</span></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="home" id="home">
+            <div class="layout">
+                <em>UX/UI Publisher</em>
+                <p>HYE JI <span>PORTFOLIO</span></p>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="layout">
+                <h4>About me</h4>
+                <div class="txt_wrap">
+                    <h5 class="mt_0">Profile</h5>
+                    <ul>
+                        <li>이름 : 정혜지</li>
+                        <li>주소 : 경기도 수원시 권선구</li>
+                        <li>연락처 : 010-5041-8019</li>
+                        <li>E-mail : wjdgpwl1004@naver.com</li>
+                    </ul>
+
+                    <h5>Career</h5>
+                    <ul>
+                        <li>2018.11 ~ 2020.02 : 메이아이 퍼블리싱팀 근무</li>
+                        <li>2017.05 ~ 2017.11 : 지오넷 웹컨텐츠팀 근무</li>
+                        <li>2016.12 ~ 2017.05 : 이음소프트 웹팀 근무</li>
+                        <li>2016.01 ~ 2016.12 : 봄인터렉티브미디어 웹팀 근무</li>
+                    </ul>
+
+                    <h5>License</h5>
+                    <ul>
+                        <li>정보처리기사</li>
+                    </ul>
+                    <h5>About me</h5>
+                    <p>
+                        현재까지 계속 퍼블리셔 경력을 쌓고 있지만, 퍼블리셔가 프론트엔드개발과 관련이 없는 분야라고 생각하지 않습니다. 퍼블리셔도 자바스크립트를 다룰줄 알아야하고, 이를 바탕으로 관련 프레임워크와 개발지식을 쌓아 프론트엔드 개발 분야로 나아갈 수 있다고 생각합니다.
+저는 이제까지 웹에이전시에서 주로 근무하면서 다양한 사이트를 구현하면서 HTML, CSS, Javascript에 대한 스킬을 올렸습니다.
+이에 더 나아가 앞으로 자사 서비스를 제공하는 회사에서 공통적인 모듈에 대한 고민, 소스 관리 최적화에 대한 고민 등을 통해 기존 스킬을 탄탄히함과 동시에 Javascript에 대한 공부, React 등의 프레임워크에 대한 학습으로 SPA및 다양한 웹 서비스를 구축할 수 있는 역량을 키우고 싶습니다.
+현재 꾸준히 Javascript 및 React에 대해 공부중이며, 공부하면서 정리한 내용을 Github에 올리고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio" id="portfolio">
+            <div class="layout">
+                <h4>My portfolio</h4>
+                <div class="port_area">
+                    <ul>
+                        <li>
+                            <div class="cont_box">
+                                <strong>공주대학교 학과 - 공과대학</strong>
+                                <span class="cont">
+                                    공주대학교 공과대학 사이트의 메인페이지입니다.
+                                    모든 부분을 직접 퍼블리싱 하였습니다.
+                                </span>
+                                <a href="./kongju/html/site/brain/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>공주대학교 학과 - 제어계측공학전공</strong>
+                                <span class="cont">
+                                    공주대학교 제어계측공학전공 사이트의 메인페이지입니다.
+                                    모든 부분을 직접 퍼블리싱 하였습니다. 
+                                </span>
+                                <a href="./kongju/html/site/control/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>공주대학교 학과 - 게임디자인학과</strong>
+                                <span class="cont">
+                                    공주대학교 게임디자인학과 사이트의 메인페이지입니다.
+                                    모든 부분을 직접 퍼블리싱 하였습니다.
+                                </span>
+                                <a href="./kongju/html/site/game/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>공주대학교 학과 - 사회복지학과</strong>
+                                <span class="cont">
+                                    공주대학교 사회복지학과 사이트의 메인페이지입니다.
+                                    모든 부분을 직접 퍼블리싱 하였습니다.
+                                </span>
+                                <a href="./kongju/html/site/socialwelfare/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>공주교육대 영재교육원</strong>
+                                <span class="cont">
+                                    공주교육대 영재교육원 사이트의 메인페이지입니다.
+                                    메인페이지 뿐만 아니라 컨텐츠, 프로그램 페이지도 
+                                    퍼블리싱 담당하였습니다. 대표적인 메인페이지를 보여드립니다.
+                                </span>
+                                <a href="./gjue/html/kor/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>한국법제연구원 법의식실태조사</strong>
+                                <span class="cont">
+                                    한국법제연구원 법의식실태조사 사이트의 메인페이지입니다.
+                                    메인페이지 뿐만 아니라 컨텐츠, 프로그램 페이지도 
+                                    퍼블리싱 담당하였습니다. 대표적인 메인페이지를 보여드립니다.
+                                </span>
+                                <a href="./flri/html/slc/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>시화호조력발전소</strong>
+                                <span class="cont">
+                                    시화호조력발전소 사이트의 메인페이지입니다.
+                                    모든 부분을 직접 퍼블리싱 하였습니다.
+                                </span>
+                                <a href="./siwha/html/kor/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>한국조폐공사 제안</strong>
+                                <span class="cont">
+                                    한국조폐공사에 제안시안을 가지고 만든 사이트입니다.
+                                    모든 부분을 직접 퍼블리싱 하였습니다.
+                                </span>
+                                <a href="./komsco/html/kor/index.html" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cont_box">
+                                <strong>대전 동구청</strong>
+                                <span class="cont">
+                                    대전 동구청 사이트입니다.
+                                    대표홈페이지, 도서관, 외국어 사이트의 메인 및 각 사이트의 컨텐츠페이지 퍼블리싱을 담당하였습니다.
+                                    또한 관광 홈페이지의 <a href="https://www.donggu.go.kr/dg/tour/77/allSights" target="_blank" title="새창" class="under_line">카카오 지도 API를 활용한 화면 구현</a> 및
+                                    <a href="https://www.donggu.go.kr/dg/tour/contents/398" target="_blank" title="새창" class="under_line">'KRPano'를 이용한 VR 페이지 구현</a>을 담당하였습니다.
+                                </span>
+                                <a href="https://www.donggu.go.kr/" target="_blank" title="새창" class="more">More</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <div class="layout">
+                <h4>Contact</h4>
+                <ul>
+                    <li>E-mail : wjdgpwl1004@naver.com</li>
+                    <li>GitHub : <a href="https://github.com/wjdgpwl1004/" target="_blank" title="새창">https://github.com/wjdgpwl1004</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <p>Copyright 2020. All rights reserved by Hyeji</p>
+        </div>
+    </body>
+</html>
